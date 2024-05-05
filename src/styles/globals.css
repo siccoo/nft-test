@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: MonumentExtended;
+  src: url("../assets/fonts/MonumentExtended-Regular.woff2");
+}
+
+@font-face {
+  font-family: Satoshibold;
+  src: url("../assets/fonts/Satoshi-Bold.woff2");
+}
+
+@font-face {
+  font-family: SatoshiMedium;
+  src: url("../assets/fonts/Satoshi-Medium.woff2");
+}
+
+@font-face {
+  font-family: SatoshiRegular;
+  src: url("../assets/fonts/Satoshi-Regular.woff2");
+}
+
+.monumentExtended {
+  font-family: MonumentExtended;
+}
+
+.satoshi-bold {
+  font-family: Satoshibold;
+}
+
+.satoshi-medium {
+  font-family: SatoshiMedium;
+}
+
+.satoshi-regular {
+  font-family: SatoshiRegular;
+}
+
+.flex-flow {
+  flex-flow: row wrap;
+}
+
+.flex-cust-1 {
+  flex: 1;
+}
+
+.flex-cust-2 {
+  flex: 2;
+}
+
+.flex-cust-3 {
+  flex: 3;
+}
+
+.flex-cust-12 {
+  flex: 1.5;
+}
+
+.cust-bg {
+  background-color: #0c0e11;
+  opacity: 0.8;
+}
+
+.header-pattern {
+  background-image: url("../assets/img/main-video-gradient.png");
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover; 
+   background-size: cover;
+   position: relative;
+}
+
+.news-pattern {
+  background-image: url("../assets/img/video-background.png");
+}
+.blur-no {
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.text-bg {
+  background: linear-gradient(to right, #3d8bff, #ab23ff);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text color transparent */
+  display: inline-block;
+}
+.text-bg-inline {
+  background: linear-gradient(to right, #3d8bff, #ab23ff);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text color transparent */
+}
+
+.border-custom {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #3d8bff, #ab23ff) 1;
+}
+
+.bg-custom {
+  background: linear-gradient(to right, #3d8bff, #ab23ff);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.btn__visible {
+  /* padding: 0.6rem 0; */
+}
+.btn__invisible {
+  position: absolute;
+  padding: 1rem 0;
+  left: 0;
+  top: 100%;
+}
+.btn:hover {
+  background-image: linear-gradient(to right, #3d8bff, #3d8bff);
+}
+.btn:hover .btn__visible {
+  transform: translateY(-100%);
+}
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  transition: all 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+.news {
+  position: relative;
+  backface-visibility: hidden;
+  transition: all 0.2s;
+}
+.news-img {
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+.news:hover .news-img {
+  transform: translateX(-2rem) scale(1.2);
+}
+h3 {
+  transition: all 0.2s;
+}
+h4,
+p {
+  transition: all 0.2s;
+}
+.news:hover h3 {
+  transform: translateX(4rem) scale(1.4);
+}
+.news:hover h4 {
+  transform: translateX(3rem) scale(1.3);
+}
+.news:hover p {
+  font-size: 0.95rem;
+}
+.news:hover button {
+  transform: translateX(-0.5rem) scale(1.1);
+}

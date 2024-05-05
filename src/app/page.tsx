@@ -4,6 +4,7 @@ import SectionThree from "./sectionThree";
 import SectionFour from "./sectionFour";
 import SectionFive from "./sectionFive";
 import SectionSix from "./sectionSix";
+import SmSectionTwo from "./smSectionTwo";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -23,6 +24,17 @@ export default function Home() {
         </div>
       </div>
       <SectionSix />
+      <div className=" flex justify-center lg:hidden">
+        <div className="w-[95%]">
+          <div className="md:block hidden">
+            <SectionTwo />
+          </div>
+          <div className="md:hidden block">
+            <SmSectionTwo />
+          </div>
+          <SectionFive />
+        </div>
+      </div>
       <Footer />
     </div>
   );
